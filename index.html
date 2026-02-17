@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pro Glass Music Player</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="music-card">
+        <div class="song-details">
+            <div class="disk" id="disk"></div>
+            <h2 id="title">No Song Loaded</h2>
+            <p id="artist">Upload a file to start</p>
+        </div>
+
+        <canvas id="visualizer"></canvas>
+
+        <div class="progress-box">
+            <input type="range" id="progress" value="0" max="100">
+            <div class="time-stamps">
+                <span id="current-time">00:00</span>
+                <span id="duration">00:00</span>
+            </div>
+        </div>
+
+        <div class="main-controls">
+            <button id="prev"><i class="fas fa-step-backward"></i></button>
+            <button id="play" class="play-btn"><i class="fas fa-play"></i></button>
+            <button id="next"><i class="fas fa-step-forward"></i></button>
+        </div>
+
+        <div class="upload-section">
+            <label for="file-upload" class="custom-upload">
+                <i class="fas fa-cloud-upload-alt"></i> Upload Music
+            </label>
+            <input type="file" id="file-upload" accept="audio/*" multiple>
+        </div>
+
+        <div class="playlist-container">
+            <h3><i class="fas fa-list"></i> Your Playlist</h3>
+            <ul id="playlist-list"></ul>
+        </div>
+    </div>
+    <audio id="audio"></audio>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(-45deg, #1a1a2e, #16213e, #0f3460);
+    color: white;
+}
+
+.music-card {
+    width: 380px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(25px);
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+    text-align: center;
+}
+
+.disk {
+    width: 140px; height: 140px;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #e73c7e, #23a6d5);
+    border: 5px solid rgba(255,255,255,0.1);
+    animation: rotate 10s linear infinite paused;
+}
+
+@keyframes rotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+.play-btn {
+    width: 60px; height: 60px;
+    background: white; color: #16213e;
+    border-radius: 50%; border: none; cursor: pointer;
+}
+
+.custom-upload {
+    display: inline-block;
+    padding: 10px 20px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 15px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.custom-upload:hover { background: rgba(255,255,255,0.4); }
+
+#file-upload { display: none; }
+
+.playlist-container {
+    margin-top: 20px; text-align: left;
+    max-height: 100px; overflow-y: auto;
+}
+
+li {
+    padding: 8px; font-size: 12px; list-style: none;
+    background: rgba(255,255,255,0.05); margin-bottom: 5px; border-radius: 5px;
+    cursor: pointer;
+}
